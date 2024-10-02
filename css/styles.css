@@ -1,0 +1,102 @@
+/* General Page Styles */
+body {
+    background-color: #000000; /* Black Background */
+    color: #ffffff; /* White Text for Readability */
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000; /* Black background for header */
+    z-index: 1000;
+    border-bottom: 1px solid #20DC8E; /* Subtle border to distinguish nav */
+}
+
+.header-title {
+    color: #00FF85; /* Neon Mint to match branding */
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 500;
+    margin-left: 10px; /* Space between logo and title */
+    font-size: 1.5rem; /* Adjust the size as needed */
+    white-space: nowrap; /* Prevent the text from wrapping to the next line */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px; /* Set a height to ensure logo fits well in the navbar */
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    color: #00FF85; /* Neon Mint for Link Color */
+    text-decoration: none;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 500;
+    margin-left: 20px; /* Spacing between links */
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #20DC8E; /* Emerald on Hover */
+}
+
+.container {
+    text-align: center;
+    padding: 100px 20px 20px; /* Add padding to account for fixed header */
+    margin-top: 60px; /* Offset for fixed header */
+}
+
+h1, h2 {
+    color: #00FF85; /* Neon Mint */
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #ffffff; /* White Text for Description */
+    margin-bottom: 20px;
+}
+
+a {
+    color: #00FF85; /* Neon Mint for all links */
+    text-decoration: none; /* Optional: removes underline from links */
+}
+
+a:visited {
+    color: #00FF85; /* Keeps visited links also Neon Mint */
+}
+
+a:hover {
+    color: #20DC8E; /* Emerald for hover links */
+}
+
+a:active {
+    color: #00FF85; /* Neon Mint for active links */
+}
+
