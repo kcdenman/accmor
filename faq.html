@@ -104,6 +104,30 @@
     });
     </script>
 
+        <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+    const navLinks = document.getElementById('nav-links');
+    if (navLinks.style.display === 'block') {
+        navLinks.style.display = 'none';
+    } else {
+        navLinks.style.display = 'block';
+    }
+});
+
+    </script>
+
+<footer>
+    <div class="footer-container">
+        <a href="index.html" class="footer-logo">
+            <img src="logos/MOR_GREEN.svg" alt="Morpheus Logo" class="logo-img">
+        </a>
+        <hr class="footer-line">
+        <div class="footer-disclaimer">
+            <p><em>Disclaimer: The information provided on this website is for informational purposes only and does not constitute financial, legal, or professional advice. Use it at your own risk.</em></p>
+        </div>
+    </div>
+</footer>
+
 
 </body>
 </html>

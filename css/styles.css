@@ -223,4 +223,41 @@ footer .social-icons a:hover {
     }
 }
 
+footer {
+    background-color: #000000; /* Black background */
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    height: 20px; /* Matches the header logo height */
+    margin-bottom: 10px;
+}
+
+.footer-line {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #00FF85; /* Green line to match header */
+    margin: 10px 0;
+}
+
+.footer-disclaimer {
+    font-size: 0.9em;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 800px;
+    margin-top: 10px;
+}
