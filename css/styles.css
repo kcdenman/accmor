@@ -191,7 +191,7 @@ footer .social-icons a:hover {
 @media (max-width: 768px) {
     .nav-links {
         display: none; /* Hide links by default on mobile */
-        flex-direction: row-reverse; /* Arrange links vertically */
+        flex-direction: column; /* Arrange links vertically */
         position: absolute;
         right: 20px;
         top: 60px;
