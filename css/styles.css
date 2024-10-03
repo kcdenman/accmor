@@ -15,6 +15,7 @@ header {
     background-color: #000000; /* Black background for header */
     z-index: 1000;
     border-bottom: 1px solid #20DC8E; /* Subtle border to distinguish nav */
+
 }
 
 .header-title {
@@ -46,7 +47,7 @@ header {
 }
 
 .logo-img {
-    height: 40px; /* Set a height to ensure logo fits well in the navbar */
+    height: 20px; /* Set a height to ensure logo fits well in the navbar */
     width: auto;
 }
 
