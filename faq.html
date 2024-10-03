@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="logos/MOR_GREEN.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="logos/MOR_GREEN.svg" alt="Morpheus Logo" class="logo-img">
+                </a>
+                <span class="header-title">Morpheus Builder Accelerator</span>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="https://agnelnieves.notion.site/109b65190d6f80aba5d0d53ade167351" target="_blank">Apply</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+    <div class="container" style="text-align: left; padding: 20px 20px 20px; margin-top: 40px;">
+
+       <h2>FAQs</h2>
+            <div class="faq">
+            <button class="faq-toggle">Q: Why should I apply to the Builders Accelerator?</button>
+            <div class="faq-content">
+                <p>A: Builders benefit from direct access to community mentors, introductions to capital providers, coding support from core developers, and compute credits from decentralized compute providers.</p>
+            </div>
+
+            <button class="faq-toggle">Q: Do I have to go through the Builders Accelerator to launch on Morpheus?</button>
+            <div class="faq-content">
+                <p>A: No. Morpheus is fully permissionless.</p>
+            </div>
+
+            <button class="faq-toggle">Q: Does the Builders Accelerator provide Capital to Builders?</button>
+            <div class="faq-content">
+                <p>A: The Builders Accelerator may choose to stake additional capital to projects using the MOR20 Fair Launch standard.</p>
+            </div>
+
+            <button class="faq-toggle">Q: Does the Builders Accelerator benefit from projects that launch through the accelerator?</button>
+            <div class="faq-content">
+                <p>A: Yes. The Builders Accelerator will participate in the weights.</p>
+            </div>
+
+            <button class="faq-toggle">Q: Are Builders required to use the MOR20 standard to capitalize their project?</button>
+            <div class="faq-content">
+                <p>A: Yes.</p>
+            </div>
+
+            <button class="faq-toggle">Q: Where can I learn about the Economics of MOR tokens?</button>
+            <div class="faq-content">
+                <p>A: <a href="https://github.com/MorpheusAIs/Docs/tree/main/!KEYDOCS%20README%20FIRST!" target="_blank">MOR Economics can be studied within Morpheus Fundamentals.</a></p>
+            </div>
+
+            <button class="faq-toggle">Q: Where can I read more about the Morpheus project?</button>
+            <div class="faq-content">
+                <p>A: <a href="https://github.com/MorpheusAIs/Docs/tree/main/!KEYDOCS%20README%20FIRST!" target="_blank">Start with the read me docs</a> on Github and find more information at <a href="https://mor.org" target="_blank">Mor.org</a>.</p>
+            </div>
+        </div>
+
+        <h2></h2>
+
+    </div>
+
+    <footer>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('active');
+            const content = button.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    });
+    </script>
+
+
+</body>
+</html>
+
+
