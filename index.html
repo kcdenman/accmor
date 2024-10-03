@@ -77,19 +77,43 @@
                 <li>Retail DAO Participation</li>
             </ul>
 
-        <h2>FAQs</h2>
-        <p>Q:Why should I go through the Builders Accelerator?</p>
-        <p>A:The Builders Accelerator provides resources to bootstrap Smart Agent products on Morpheus. Builders benefit from direct access to community mentors, introductions to capital providers, coding support from core developers, and compute credits from decentralized compute providers.</p>
-        <p>Q: Do I have to go through the Builders Accelerator to launch on Morpheus?</p>
-        <p>A: No. Morpheus is fully permissionless.</p>
-        <p>Q:Does the Builders Accelerator provide Capital to Builders?</p>
-        <p>A:The Builders Accelerater may choose to stake additional capital to projects using the MOR20 Fair Launch standard.</p>
-        <p>Q:Does the Builders Accelerator benefit from projects that launch through the accelerator?</p>
-        <p>A:Yes. The Builders Accelerator will participate in the weights</p>
-        <p>Q:Are Builders required to use the MOR20 standard to capitalize their project?</p>
-        <p>A:Yes.</p>
-        <p>Q: Where can I read more about the Morpheus project?</p>
-        <p>A: <a href="https://github.com/MorpheusAIs/Docs/tree/main/!KEYDOCS%20README%20FIRST!" target="_blank">Start with the read me docs</a> on Github and find more information at<a href="https://mor.org" target="_blank"> Mor.org.</a></p>
+       <h2>FAQs</h2>
+            <div class="faq">
+            <button class="faq-toggle">Q: Why should I apply to the Builders Accelerator?</button>
+            <div class="faq-content">
+                <p>A: Builders benefit from direct access to community mentors, introductions to capital providers, coding support from core developers, and compute credits from decentralized compute providers.</p>
+            </div>
+
+            <button class="faq-toggle">Q: Do I have to go through the Builders Accelerator to launch on Morpheus?</button>
+            <div class="faq-content">
+                <p>A: No. Morpheus is fully permissionless.</p>
+            </div>
+
+            <button class="faq-toggle">Q: Does the Builders Accelerator provide Capital to Builders?</button>
+            <div class="faq-content">
+                <p>A: The Builders Accelerator may choose to stake additional capital to projects using the MOR20 Fair Launch standard.</p>
+            </div>
+
+            <button class="faq-toggle">Q: Does the Builders Accelerator benefit from projects that launch through the accelerator?</button>
+            <div class="faq-content">
+                <p>A: Yes. The Builders Accelerator will participate in the weights.</p>
+            </div>
+
+            <button class="faq-toggle">Q: Are Builders required to use the MOR20 standard to capitalize their project?</button>
+            <div class="faq-content">
+                <p>A: Yes.</p>
+            </div>
+
+            <button class="faq-toggle">Q: Where can I learn about the Economics of MOR tokens?</button>
+            <div class="faq-content">
+                <p>A: <a href="https://github.com/MorpheusAIs/Docs/tree/main/!KEYDOCS%20README%20FIRST!" target="_blank">MOR Economics can be studied within Morpheus Fundamentals.</a></p>
+            </div>
+
+            <button class="faq-toggle">Q: Where can I read more about the Morpheus project?</button>
+            <div class="faq-content">
+                <p>A: <a href="https://github.com/MorpheusAIs/Docs/tree/main/!KEYDOCS%20README%20FIRST!" target="_blank">Start with the read me docs</a> on Github and find more information at <a href="https://mor.org" target="_blank">Mor.org</a>.</p>
+            </div>
+        </div>
 
         <h2></h2>
 
@@ -109,6 +133,22 @@
             </a>
         </div>
     </footer>
+
+    <script>
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('active');
+            const content = button.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    });
+    </script>
+
+
 </body>
 </html>
 

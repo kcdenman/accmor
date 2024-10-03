@@ -101,6 +101,57 @@ a:active {
     color: #00FF85; /* Neon Mint for active links */
 }
 
+/* FAQ Toggle Styles */
+.faq-toggle {
+    background-color: #000000;  /* Black background matching the page */
+    color: #ffffff;  /* White text */
+    border: none;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    padding-left: 35px;  /* Add extra padding for arrow space */
+}
+
+.faq-toggle::before {
+    content: '\25B6';  /* Unicode character for right-pointing arrow */
+    color: #00FF85;  /* Neon Mint */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.faq-toggle.active::before {
+    transform: translateY(-50%) rotate(90deg);  /* Rotate arrow to point down */
+}
+
+.faq-content {
+    display: none;
+    padding: 15px;
+    border-left: 3px solid #00FF85;  /* Neon Mint border */
+    background-color: #000000;  /* Black background matching the page */
+    color: #ffffff;  /* White text for readability */
+    margin-bottom: 10px;
+}
+
+.faq-toggle.active {
+    background-color: #000000;  /* Keep background black when active */
+}
+
+/* Custom cursor style */
+body, .faq-toggle {
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 24 24" width="32"><path fill="%2300FF85" d="M0 0h24v24H0z" fill="none"/><path fill="%2300FF85" d="M6 4l12 8-12 8z"/></svg>') 16 0, auto; /* Green cursor */
+}
+
+
+
 /* Social Icons styling */
 footer .social-icons {
     display: flex;
@@ -125,3 +176,4 @@ footer .social-icons a:hover {
         gap: 15px; /* Adjust gap for smaller screens */
     }
 }
+
