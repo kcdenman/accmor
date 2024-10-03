@@ -11,25 +11,30 @@
 
 <body>
     <header>
+        <!--Nav for mobile views-->
         <nav class="navbar">
             <div class="nav-container">
                 <a href="index.html" class="nav-logo">
                     <img src="logos/MOR_GREEN.svg" alt="Morpheus Logo" class="logo-img">
                 </a>
-                <span class="header-title">Morpheus Builder Accelerator</span>
-                <div class="nav-links">
+                <!--<span class="header-title">Morpheus Builder Accelerator</span>-->
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    ☰
+                </button>
+                <div class="nav-links" id="nav-links">
                     <a href="index.html">Home</a>
                     <a href="https://agnelnieves.notion.site/109b65190d6f80aba5d0d53ade167351" target="_blank">Apply</a>
                     <a href="faq.html">FAQ</a>
                 </div>
             </div>
         </nav>
+
     </header>
     
 
     <div class="container" style="text-align: left; padding: 20px 20px 20px; margin-top: 40px;">
 
-        <h2>Coming Soon</h2>
+        <h2>Coming Soon: Morpheus Builder Accelerator</h2>
         <p class="description"><em>Disclaimer: All content on this website is for informational purposes only and is subject to change. Nothing on this site is finalized, and the details provided may be updated or revised without prior notice.</em></p>
         <p></p>
 
@@ -110,6 +115,18 @@
             }
         });
     });
+    </script>
+
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+    const navLinks = document.getElementById('nav-links');
+    if (navLinks.style.display === 'block') {
+        navLinks.style.display = 'none';
+    } else {
+        navLinks.style.display = 'block';
+    }
+});
+
     </script>
 
 

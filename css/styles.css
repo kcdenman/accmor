@@ -177,3 +177,50 @@ footer .social-icons a:hover {
     }
 }
 
+/* Hamburger menu toggle button (hidden by default) */
+.nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #00FF85; /* Match your branding */
+    cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: row-reverse; /* Arrange links vertically */
+        position: absolute;
+        right: 20px;
+        top: 60px;
+        background-color: #000000; /* Match your header background */
+        padding: 10px;
+        border: 1px solid #20DC8E; /* Optional: add a border to the dropdown */
+        z-index: 1000; /* Ensure it appears above other content */
+        width: 150px; /* Set a width to better display links in a vertical format */
+    }
+
+    .nav-links a {
+        margin: 10px 0; /* Space between links */
+        color: #00FF85; /* Neon Mint */
+        text-align: left; /* Align text to the left for better readability */
+        text-decoration: none; /* Remove underline */
+    }
+
+    .nav-toggle {
+        display: block; /* Show the toggle button on mobile */
+        font-size: 1.5rem; /* Adjust size of the hamburger icon */
+        background: none; /* Remove any default button styling */
+        border: none; /* Remove border */
+        color: #00FF85; /* Match branding color */
+        cursor: pointer;
+    }
+
+    .nav-container {
+        position: relative; /* Keep the container stable when toggling */
+    }
+}
+
+
