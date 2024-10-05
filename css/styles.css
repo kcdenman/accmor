@@ -285,9 +285,9 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-    margin: 50px auto; /* Center the container with auto margin */
+    margin: 10px auto; /* Center the container with auto margin */
     max-width: 1200px; /* Limit the max width for larger screens */
-    padding: 0 20px; /* Add padding for smaller screens */
+    padding: 0 10px; /* Add padding for smaller screens */
 }
 
 .tile {
@@ -324,13 +324,17 @@ footer {
 @media (max-width: 768px) {
     .tiles-container {
         flex-direction: column; /* Stack tiles vertically for mobile */
-        gap: 15px; /* Adjust gap for mobile view */
+        gap: 10px; /* Adjust gap for mobile view */
+        padding: 10px; /* Reduced padding for mobile view */
+        margin: 0; /* Remove extra margin */
     }
 
     .tile {
         flex: 1 1 100%; /* Full width for mobile */
+        margin: 0 0 10px 0; /* Reduced bottom margin between tiles */
     }
 }
+
 
 /* Mobile-specific adjustments to show description automatically */
 @media (max-width: 768px) {
