@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="logos/MOR_GREEN.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <!--Nav for mobile views-->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="logos/MOR_GREEN.svg" alt="Morpheus Logo" class="logo-img">
+                </a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    ☰
+                </button>
+                <div class="nav-links" id="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="https://agnelnieves.notion.site/109b65190d6f80aba5d0d53ade167351" target="_blank">Apply</a>
+                    <a href="blog.html" target="_blank">Blog</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container" style="text-align: left; padding: 20px; margin-top: 40px;">
+        <h2>Latest Blog Posts</h2>
+        
+        <div class="blog-list">
+            <div class="blog-post">
+                <h3><a href="https://www.kevindenman.xyz/blog/the-rise-of-the-cybereconomic-smart-agents.html" target="_blank">The Rise of Cybereconomic Smart Agents</a></h3>
+                <p class="blog-meta">Published by Kevin Denman on: August 6, 2024</p>
+                <p class="blog-description">Explore how smart agents are transforming the Web3 landscape by enhancing developer experiences and creating new opportunities for automation.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+        <div class="footer-container">
+            <a href="index.html" class="footer-logo">
+                <img src="logos/MOR_GREEN.svg" alt="Morpheus Logo" class="logo-img">
+            </a>
+            <hr class="footer-line">
+            <div class="footer-disclaimer">
+                <p><em>Disclaimer: All content on this website is for informational purposes only and is subject to change. Nothing on this site is finalized, and the details provided may be updated or revised without prior notice.</em></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('open'); // Toggle the 'open' class to slide in or out
+        });
+    </script>
+</body>
+</html>
