@@ -189,24 +189,38 @@ footer .social-icons a:hover {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+    
     .nav-links {
-        display: none; /* Hide links by default on mobile */
-        flex-direction: column; /* Arrange links vertically */
-        position: absolute;
-        right: 20px;
-        top: 60px;
+        position: fixed;
+        right: -100%; /* Start off-screen */
+        top: 0;
+        height: 100%; /* Full height for background effect */
+        width: 250px; /* Fixed width for the menu */
         background-color: #000000; /* Match your header background */
-        padding: 10px;
-        border: 1px solid #20DC8E; /* Optional: add a border to the dropdown */
+        padding: 20px;
+        border-left: 1px solid #20DC8E; /* Optional border to separate the menu */
         z-index: 1000; /* Ensure it appears above other content */
-        width: 150px; /* Set a width to better display links in a vertical format */
+        transition: right 0.5s ease-in-out; /* Smooth sliding effect */
+        display: flex; /* Set to flex to arrange items */
+        flex-direction: column; /* Arrange items vertically */
     }
 
     .nav-links a {
-        margin: 10px 0; /* Space between links */
+        margin-bottom: 10px; /* Space between links */
         color: #00FF85; /* Neon Mint */
-        text-align: left; /* Align text to the left for better readability */
+        text-align: left; /* Align text to the left for cleaner look */
         text-decoration: none; /* Remove underline */
+        padding: 10px 0; /* Padding to make it easy to tap */
+        font-size: 1.2rem; /* Standard font size for readability */
+        transition: color 0.3s ease; /* Smooth hover effect */
+    }
+
+    .nav-links a:hover {
+        color: #20DC8E; /* Change color on hover for better feedback */
+    }
+
+    .nav-links.open {
+        right: 0; /* Slide in the menu from the right */
     }
 
     .nav-toggle {
@@ -216,12 +230,14 @@ footer .social-icons a:hover {
         border: none; /* Remove border */
         color: #00FF85; /* Match branding color */
         cursor: pointer;
+        z-index: 1001; /* Ensure it stays above the menu */
     }
 
     .nav-container {
         position: relative; /* Keep the container stable when toggling */
     }
 }
+
 
 footer {
     background-color: #000000; /* Black background */
@@ -261,3 +277,64 @@ footer {
     max-width: 800px;
     margin-top: 10px;
 }
+
+/* Tile Styles */
+.tiles-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 50px auto; /* Center the container with auto margin */
+    max-width: 1200px; /* Limit the max width for larger screens */
+    padding: 0 20px; /* Add padding for smaller screens */
+}
+
+.tile {
+    background-color: #000000;  /* Black background */
+    border: 2px solid #20DC8E;  /* Emerald border */
+    color: #00FF85;  /* Neon Mint text color */
+    padding: 20px;
+    flex: 1 1 calc(33% - 40px); /* Ensure tiles share equal space */
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    min-width: 250px; /* Prevent tiles from becoming too small */
+}
+
+.tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #20DC8E;  /* Glowing shadow effect on hover */
+}
+
+.tile-description {
+    display: none;
+    color: #ffffff;  /* White text for description */
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 1px solid #20DC8E;  /* Emerald line to separate */
+}
+
+.tile:hover .tile-description {
+    display: block;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .tiles-container {
+        flex-direction: column; /* Stack tiles vertically for mobile */
+        gap: 15px; /* Adjust gap for mobile view */
+    }
+
+    .tile {
+        flex: 1 1 100%; /* Full width for mobile */
+    }
+}
+
+/* Mobile-specific adjustments to show description automatically */
+@media (max-width: 768px) {
+    .tile-description {
+        display: block; /* Make the description visible by default on mobile */
+    }
+}
+

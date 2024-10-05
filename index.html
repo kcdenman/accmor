@@ -11,13 +11,11 @@
 
 <body>
     <header>
-        <!--Nav for mobile views-->
         <nav class="navbar">
             <div class="nav-container">
                 <a href="index.html" class="nav-logo">
                     <img src="logos/MOR_GREEN.svg" alt="Morpheus Logo" class="logo-img">
                 </a>
-                <!--<span class="header-title">Morpheus Builder Accelerator</span>-->
                 <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
                     ☰
                 </button>
@@ -28,8 +26,8 @@
                 </div>
             </div>
         </nav>
-
     </header>
+
     
 
     <div class="container" style="text-align: left; padding: 20px 20px 20px; margin-top: 40px;">
@@ -42,22 +40,43 @@
         <p class="description">The Morpheus Builder Accelerator is designed to accelerate Smart Agent development by pairing builders with Capital, Code and Compute.</p>
         <p></p>
 
-        
-        <h2>Code</h2>
-        <p class="description">The Morpheous developer community is growing. Smart Agent development tooling is available at <a href="https://github.com/MorpheusAIs/moragents" target="_blank">moreagents</a>.</p>
+        <div class="tiles-container">
 
-        <h2>Capital</h2>
-        <p class="description">The <a href="https://mor.org/MOR20" target=_blank>MOR20 Fair Launch standard</a> enables your agent to receive funding.</p>
+            <div class="tile">
+                <h2>Code</h2>
+                <div class="tile-description">
+                    The Morpheous developer community is growing. Smart Agent development tooling is available at <a href="https://github.com/MorpheusAIs/moragents" target="_blank">moreagents</a>.
+                </div>
+            </div>
 
-        <h2>Compute</h2>
-        <p class="description">Smart Agent's access decentralized compute resources using the <a href="https://github.com/MorpheusAIs/Morpheus-Lumerin-Node/blob/main/docs/00-overview.md" target=_blank>Morpheus-Lumerin-Node implementation</a>.</p>
+            <div class="tile">
+                <h2>Capital</h2>
+                <div class="tile-description">
+                    The MOR20 Fair Launch standard enables your agent to receive funding.
+                </div>
+            </div>
 
-        <h2>Use Cases</h2>
-        <p>Smart Agents serve as an interoperability layer connecting large-language-models (LLMs) to Web3 wallets. The LLM uses  natural language prompts from the user to approximate the users on-chain intent, which the Smart Agent uses to contruct an on-chain transaction proposal that the end user can review and sign.</p>
+            <div class="tile">
+                <h2>Compute</h2>
+                <div class="tile-description">
+                    Smart Agent's access decentralized compute resources using the <a href="https://github.com/MorpheusAIs/Morpheus-Lumerin-Node/blob/main/docs/00-overview.md" target="_blank">Morpheus-Lumerin-Node implementation</a>.
+                </div>
+            </div>
+        </div>
+
+
+        <h2>Smart Agent Use Cases</h2>
+        <p>Smart Agents connect large-language-models (LLMs) to Web3 wallets. Smart Agent are capable of detecting a the on-chain intent behind a prompt and contructing executable transactions for users to sign.</p>
 
         <p>By extending LLMs capabilities to on-chain actions, Smart Agents open up a new read-write paradigm between AI agents and blockchain protocols. While the use cases of Smart Agents are limitless, we have curated a list to enable the first generation of Morpheus hackers.</p>
 
         <p>We live in the most interesting of times.</p>
+
+        <h2>Morpheus</h2>
+            <ul>
+                <li>Smart Agent Forge</li>
+                <li>Modular Smart Agents</li>
+            </ul> 
 
         <h2>DeFi</h2>
             <ul>
@@ -101,31 +120,11 @@
     </footer>
 
 
-
-    <script>
-    document.querySelectorAll('.faq-toggle').forEach(button => {
-        button.addEventListener('click', () => {
-            button.classList.toggle('active');
-            const content = button.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
-    });
-    </script>
-
     <script>
         document.getElementById('nav-toggle').addEventListener('click', function() {
-    const navLinks = document.getElementById('nav-links');
-    if (navLinks.style.display === 'block') {
-        navLinks.style.display = 'none';
-    } else {
-        navLinks.style.display = 'block';
-    }
-});
-
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('open'); // Toggle the 'open' class to slide in or out
+        });
     </script>
 
 

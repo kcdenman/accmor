@@ -33,7 +33,7 @@
 
     <div class="container" style="text-align: left; padding: 20px 20px 20px; margin-top: 40px;">
 
-       <h2>FAQs</h2>
+       <h2>FAQs [DRAFT]</h2>
             <div class="faq">
             <button class="faq-toggle">Q: Why should I apply to the Builders Accelerator?</button>
             <div class="faq-content">
@@ -104,16 +104,11 @@
     });
     </script>
 
-        <script>
+    <script>
         document.getElementById('nav-toggle').addEventListener('click', function() {
-    const navLinks = document.getElementById('nav-links');
-    if (navLinks.style.display === 'block') {
-        navLinks.style.display = 'none';
-    } else {
-        navLinks.style.display = 'block';
-    }
-});
-
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('open'); // Toggle the 'open' class to slide in or out
+        });
     </script>
 
 <footer>
