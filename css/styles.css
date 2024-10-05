@@ -225,12 +225,13 @@ footer .social-icons a:hover {
 
     .nav-toggle {
         display: block; /* Show the toggle button on mobile */
-        font-size: 1.5rem; /* Adjust size of the hamburger icon */
+        font-size: 2rem; /* Adjust size of the hamburger icon */
         background: none; /* Remove any default button styling */
         border: none; /* Remove border */
         color: #00FF85; /* Match branding color */
         cursor: pointer;
         z-index: 1001; /* Ensure it stays above the menu */
+        margin-left: 10px; /*same margin as the logo for alignment
     }
 
     .nav-container {
