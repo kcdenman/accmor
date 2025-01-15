@@ -283,7 +283,7 @@ footer {
 /* Tiles container for larger screens (wide view) */
 .tiles-container {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping to force a single row */
+    flex-wrap: wrap; /* Prevent wrapping to force a single row */
     justify-content: space-between; /* Space tiles evenly across the container */
     padding: 20px; /* Add some padding around the container */
     margin: 0 auto; /* Center the container */
@@ -300,8 +300,10 @@ footer {
     text-align: center;
     cursor: pointer;
     transition: transform 0.6s ease, box-shadow 0.6s ease;
-    margin-bottom: 20px; /* Space between rows of tiles */
+    margin-bottom: 0px; /* Space between rows of tiles */
     min-width: 250px; /* Prevent tiles from becoming too small */
+    min-height: 50px;
+    border-radius: 10px; /* Slightly rounded corners */
 }
 
 /* Tile hover effect for visual feedback */
@@ -322,7 +324,8 @@ footer {
     font-size: 2rem; /* Adjust the size to make the title more prominent */
     width: 100%; /* Ensure the title takes up the full width of its container */
     margin: 0; /* Remove any default margins */
-    padding-bottom: 10px; /* Add space below the title */
+    text-transform: lowercase;
+    padding-bottom: 8px; /* Add space below the title */
 }
 
 /* Responsive adjustments for smaller screens */
@@ -363,5 +366,169 @@ footer {
 video {
   max-width: 100%; /* Responsive */
   height: auto;
+}
+
+/* Full-Screen Hero Section */
+.hero {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-image: url('../images/hero-background.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures image covers the area */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff; /* White text for visibility */
+    overflow: hidden; /* Prevent scrollbars if any overflow */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 64px; /* Large text for emphasis */
+    font-weight: 700;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0px;
+}
+
+.hero-content p.hero-mission {
+    font-size: 20px; /* Readable size */
+    font-weight: 400; /* Normal weight for contrast */
+    margin-top: 0px; /* Space between the title and mission */
+    max-width: 600px; /* Limit text width for better readability */
+    line-height: 1.5; /* Improve spacing for readability */
+    color: #ffffff; /* White text color */
+    text-align: center;
+}
+
+/* Hero Button Styles */
+.hero-button {
+    display: inline-block;
+    margin-top: 0px; /* Space from mission text */
+    padding: 12px 12px; /* Button padding */
+    font-size: 18px;
+    font-weight: 200;
+    color: #000000; /* Black text for contrast */
+    background-color: #00FF85; /* Green background */
+    text-transform: lowercase;
+    text-decoration: none; /* Remove underline */
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+/* Button Hover Effect */
+.hero-button:hover {
+    background-color: #34a870; /* Darker green on hover */
+    color: #ffffff;
+    transform: scale(1.05); /* Slight scale-up effect */
+}
+
+.hero-button:visited {
+    color: #000000; /* Ensure visited buttons remain black */
+}
+
+
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px; /* Adjust text size for smaller screens */
+    }
+}
+
+/* Use Cases Section */
+.use-cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    perspective: 1000px; /* Enable 3D effect */
+}
+
+.use-case {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    perspective: 1000px; /* Needed for 3D effect */
+}
+
+.use-case-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* Ensures 3D transformations */
+    transition: transform 0.6s ease; /* Smooth transition */
+}
+
+.use-case:hover .use-case-inner {
+    transform: rotateY(180deg); /* Swivel card on hover */
+}
+
+.use-case-front, .use-case-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back when not visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    color: #ffffff; /* White text */
+}
+
+.use-case-front {
+    background-color: #00FF85; /* Green front */
+    color: #000000; /* Black text for contrast */
+    font-size: 24px; /* Larger title size */
+}
+
+.use-case-back {
+    background-color: #000000; /* Black back */
+    color: #00FF85; /* Green text for description */
+    transform: rotateY(180deg); /* Flip back to match the hover effect */
+    font-size: 16px; /* Smaller text for description */
+    padding: 20px; /* Add some padding */
+    text-align: center;
+}
+
+.use-case:hover .use-case-back {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .use-case {
+        height: 180px; /* Adjust card height for smaller screens */
+    }
+
+    .use-case-front {
+        font-size: 20px; /* Adjust title size */
+    }
+
+    .use-case-back {
+        font-size: 14px; /* Adjust text size for smaller screens */
+    }
 }
 
