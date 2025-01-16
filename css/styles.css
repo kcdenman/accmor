@@ -27,6 +27,8 @@ header {
     white-space: nowrap; /* Prevent the text from wrapping to the next line */
 }
 
+/* Navigation Styles */
+
 .navbar {
     display: flex;
     justify-content: center;
@@ -51,22 +53,6 @@ header {
     width: auto;
 }
 
-.nav-links {
-    display: flex;
-}
-
-.nav-links a {
-    color: #00FF85; /* Neon Mint for Link Color */
-    text-decoration: none;
-    font-family: 'Inter', Arial, sans-serif;
-    font-weight: 500;
-    margin-left: 20px; /* Spacing between links */
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #20DC8E; /* Emerald on Hover */
-}
 
 .container {
     text-align: center;
@@ -85,7 +71,7 @@ h1, h2, h3 {
 }
 
 a {
-    color: #00FF85; /* Neon Mint for all links */
+    color: #00FF85; /* Neon Mint for all links globally */
     text-decoration: none; /* Optional: removes underline from links */
 }
 
@@ -275,7 +261,7 @@ footer {
     font-size: 0.9em;
     line-height: 1.5;
     text-align: center;
-    max-width: 800px;
+    max-width: 1300px;
     margin-top: 10px;
 }
 
