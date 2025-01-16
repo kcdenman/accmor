@@ -18,6 +18,20 @@ header {
 
 }
 
+.nav-links a {
+    color: #FFFFFF; /* White links for navigation */
+    text-decoration: none; /* Remove underline */
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 500;
+    margin: 0 15px; /* Spacing between links */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-links a:hover {
+    color: #20DC8E; /* Emerald on hover */
+}
+
+
 .header-title {
     color: #00FF85; /* Neon Mint to match branding */
     font-family: 'Inter', Arial, sans-serif;
@@ -68,23 +82,6 @@ h1, h2, h3 {
 .description {
     color: #ffffff; /* White Text for Description */
     margin-bottom: 20px;
-}
-
-a {
-    color: #00FF85; /* Neon Mint for all links globally */
-    text-decoration: none; /* Optional: removes underline from links */
-}
-
-a:visited {
-    color: #00FF85; /* Keeps visited links also Neon Mint */
-}
-
-a:hover {
-    color: #20DC8E; /* Emerald for hover links */
-}
-
-a:active {
-    color: #00FF85; /* Neon Mint for active links */
 }
 
 /* FAQ Toggle Styles */
@@ -189,6 +186,7 @@ footer .social-icons a:hover {
         transition: right 0.5s ease-in-out; /* Smooth sliding effect */
         display: flex; /* Set to flex to arrange items */
         flex-direction: column; /* Arrange items vertically */
+        gap: 20px; /* space between the links */
     }
 
     .nav-links a {
@@ -242,7 +240,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .footer-logo img {
