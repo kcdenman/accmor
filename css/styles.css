@@ -413,13 +413,16 @@ video {
 }
 
 .hero-content p.hero-mission {
-    font-size: 20px; /* Readable size */
+    font-size: 20px; /* Base font size */
     font-weight: 400; /* Normal weight for contrast */
-    margin-top: 0px; /* Space between the title and mission */
+    margin: 0 auto; /* Center the text with auto margins */
+    padding: 0 20px; /* Add horizontal padding for spacing */
     max-width: 600px; /* Limit text width for better readability */
     line-height: 1.5; /* Improve spacing for readability */
     color: #ffffff; /* White text color */
-    text-align: center;
+    text-align: center; /* Center-align text */
+    word-wrap: break-word; /* Handle long words gracefully */
+    overflow-wrap: break-word; /* Modern equivalent for breaking words */
 }
 
 /* Hero Button Styles */
