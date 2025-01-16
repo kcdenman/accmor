@@ -47,7 +47,7 @@ header {
 }
 
 .logo-img {
-    height: 20px; /* Set a height to ensure logo fits well in the navbar */
+    height: 30px; /* Set a height to ensure logo fits well in the navbar */
     width: auto;
 }
 
@@ -373,8 +373,8 @@ video {
     position: relative;
     width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
-    background-image: url('../images/hero-background.jpg'); /* Replace with your image path */
-    background-size: cover; /* Ensures image covers the area */
+    background-image: url('../logos/morbuilders_logo_dark.svg'); /* Replace with your image path */
+    background-size: 750px 750px; /* Ensures image covers the area */
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
@@ -385,6 +385,7 @@ video {
     overflow: hidden; /* Prevent scrollbars if any overflow */
 }
 
+/* Semi-transparent overlay */
 .hero::before {
     content: '';
     position: absolute;
@@ -392,10 +393,26 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, .75); /* Semi-transparent black overlay */
     z-index: 1;
 }
 
+/* Background logo */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    width: 100px; /* Adjust size of the logo */
+    height: auto;
+    
+    background-size: contain; /* Ensures the logo maintains its aspect ratio */
+    opacity: .01; /* Adjust transparency (0.1 = very light, 1 = fully opaque) */
+    z-index: 0; /* Sits behind content */
+}
+
+/* Hero Content */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -408,6 +425,7 @@ video {
     letter-spacing: 2px;
     margin: 0;
     padding: 0px;
+    color:#ffffff;
 }
 
 .hero-content p.hero-mission {
@@ -445,6 +463,17 @@ video {
 
 .hero-button:visited {
     color: #000000; /* Ensure visited buttons remain black */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px; /* Adjust text size for smaller screens */
+    }
+
+    .hero::after {
+        width: 100%; /* Adjust logo size for smaller screens */
+    }
 }
 
 
