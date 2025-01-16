@@ -374,7 +374,7 @@ video {
     width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
     background-image: url('../logos/morbuilders_logo_dark.svg'); /* Replace with your image path */
-    background-size: 750px 750px; /* Ensures image covers the area */
+    background-size: 700px 700px; /* Ensures image covers the area */
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
