@@ -377,7 +377,7 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .75); /* Semi-transparent black overlay */
+    background: rgba(0, 0, 0, .85); /* Semi-transparent black overlay */
     z-index: 1;
 }
 
@@ -392,7 +392,7 @@ video {
     height: auto;
     
     background-size: contain; /* Ensures the logo maintains its aspect ratio */
-    opacity: .01; /* Adjust transparency (0.1 = very light, 1 = fully opaque) */
+    opacity: .001; /* Adjust transparency (0.1 = very light, 1 = fully opaque) */
     z-index: 0; /* Sits behind content */
 }
 
@@ -429,6 +429,7 @@ video {
 .hero-button {
     display: inline-block;
     margin-top: 10px; /* Space from mission text */
+    margin: 10px 5px;/* 5px horizontal spacing, 10px vertical spacing */
     padding: 12px 12px; /* Button padding */
     font-size: 18px;
     font-weight: 200;
@@ -546,4 +547,90 @@ video {
     .use-case-back {
         font-size: 14px; /* Adjust text size for smaller screens */
     }
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 50px 20px; /* Space around the grid */
+    background-color: #000000; /* Black background */
+    text-align: center; /* Center the section title */
+    color: #ffffff; /* White text for the title */
+}
+
+.portfolio-container {
+    max-width: 1200px; /* Constrain the container width */
+    margin: 0 auto;
+}
+
+.portfolio-title {
+    font-size: 2rem;
+    margin-bottom: 30px; /* Space below the title */
+    color: #ffffff;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columns adjust to available space */
+    gap: 20px; /* Space between cards */
+    justify-items: stretch; /* Ensure cards stretch to fill available space */
+}
+
+/* White Card Styling */
+.portfolio-item {
+    position: relative; /* Enable absolute positioning for the pill */
+    background-color: #ffffff; /* White card background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 50px 50px 50px; /* Add extra padding at the top */
+    display: flex;
+    justify-content: center; /* Center the logo */
+    align-items: center; /* Center the logo */
+    height: 150px; /* Fixed card height */
+    width: auto;
+}
+
+/* Pill Style */
+.portfolio-pill {
+    display: inline-block; /* Ensure the pill wraps tightly around its content */
+    padding: 5px 10px; /* Space inside the pill */
+    font-size: 0.9rem; /* Smaller text size */
+    font-weight: 600; /* Bold text */
+    color: #ffffff; /* White text */
+    background-color: #000000; /* Black background */
+    border-radius: 15px; /* Rounded corners for the pill shape */
+    text-transform: uppercase; /* Optional: Make text uppercase */
+    position: absolute; /* Position the pill within the card */
+    bottom: 10px; /* Distance from the bottom of the card */
+    left: 10px; /* Distance from the left of the card */
+}
+
+/* Logo Styling */
+.portfolio-logo {
+    max-width: 100%; /* Make sure the logo doesn't overflow */
+    max-height: 100%; /* Ensure it fits within the card */
+    object-fit: contain; /* Preserve aspect ratio */
+}
+
+/* Stake Link Style */
+.portfolio-stake {
+    display: inline-block; /* Wrap tightly around the content */
+    padding: 5px 10px; /* Space inside the pill */
+    font-size: 0.9rem; /* Smaller text size */
+    font-weight: 600; /* Bold text */
+    color: #00FF85; /* Neon mint green text */
+    background-color: #000000; /* Black background */
+    border-radius: 15px; /* Rounded corners for the pill shape */
+    text-transform: uppercase; /* Optional: Make text uppercase */
+    text-decoration: none; /* Remove underline for the link */
+    position: absolute; /* Position it within the card */
+    bottom: 10px; /* Distance from the bottom of the card */
+    right: 10px; /* Distance from the left of the card */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+/* Hover Effect for the Stake Link */
+.portfolio-stake:hover {
+    background-color: #34a870; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect */
 }
