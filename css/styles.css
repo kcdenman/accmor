@@ -215,7 +215,7 @@ footer .social-icons a:hover {
         color: #00FF85; /* Match branding color */
         cursor: pointer;
         z-index: 1001; /* Ensure it stays above the menu */
-        margin-left: 10px; /*same margin as the logo for alignment
+        /*margin-left: 0px; /*same margin as the logo for alignment*/
     }
 
     .nav-container {
