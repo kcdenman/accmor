@@ -634,3 +634,121 @@ video {
     background-color: #34a870; /* Slightly darker green on hover */
     transform: scale(1.05); /* Slight zoom effect */
 }
+
+/* TIMELINE CLEAN */
+.timeline-clean {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  margin: 100px auto 60px auto;
+}
+
+/* Green line on the left side */
+.timeline-clean::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  bottom: 10px;
+  left: 25px;
+  width: 2px;
+  background: #20DC8E;
+  opacity: 0.8;
+}
+
+/* Each item is a row with a circle + content */
+.timeline-clean-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Month Circle */
+.timeline-clean-circle {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #000000;
+  border: 2px solid #20DC8E;
+  color: #00FF85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-right: 20px;
+  position: relative;
+  z-index: 1;
+  cursor: default;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-clean-circle:hover {
+  box-shadow: 0 0 10px #00FF85;
+  transform: scale(1.03);
+}
+
+/* Content Box */
+.timeline-clean-content {
+  background: #000000;
+  border: 1px solid #20DC8E;
+  border-radius: 6px;
+  color: #ffffff;
+  padding: 16px 20px;
+  position: relative;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.timeline-clean-content:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 15px rgba(32, 220, 142, 0.15);
+}
+
+/* Styling for unordered lists inside timeline content */
+.timeline-clean-content ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.timeline-clean-content li {
+  margin-bottom: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline-clean {
+    width: 100%;
+    margin: 80px auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .timeline-clean::before {
+    left: 15px;
+    top: 25px; /*line starts at the circles center*/
+    bottom: 0;
+  }
+
+  .timeline-clean::after {
+    display: none; /* Move the white ball in sync with the line */
+  }
+
+  .timeline-clean-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-clean-circle {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .timeline-clean-content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
