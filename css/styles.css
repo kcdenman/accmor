@@ -649,7 +649,7 @@ video {
   position: absolute;
   top: 35px;
   bottom: 10px;
-  left: 25px;
+  left: 26px; /* Adjust this value to align with circles */
   width: 2px;
   background: #20DC8E;
   opacity: 0.8;
@@ -728,7 +728,7 @@ video {
   }
 
   .timeline-clean::before {
-    left: 15px;
+    left: 35px;
     top: 25px; /*line starts at the circles center*/
     bottom: 0;
   }
@@ -738,13 +738,17 @@ video {
   }
 
   .timeline-clean-item {
+
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 30px;
   }
 
   .timeline-clean-circle {
-    margin-bottom: 10px;
-    margin-right: 0;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-right: 0px;
+    margin-left: 0px;
   }
 
   .timeline-clean-content {
