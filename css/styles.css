@@ -649,7 +649,7 @@ video {
   position: absolute;
   top: 35px;
   bottom: 10px;
-  left: 25px; /* Adjust this value to align with circles */
+  left: 26px; /* Adjust this value to align with circles */
   width: 2px;
   background: #20DC8E;
   opacity: 0.8;
