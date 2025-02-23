@@ -756,3 +756,14 @@ video {
     box-sizing: border-box;
   }
 }
+
+/* Add these styles for blog links */
+.blog-post h3 a {
+    color: #FFFFFF; /* Start with white like nav links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-post h3 a:hover {
+    color: #20DC8E; /* Same hover color as nav */
+}
