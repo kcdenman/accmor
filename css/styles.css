@@ -767,3 +767,20 @@ video {
 .blog-post h3 a:hover {
     color: #20DC8E; /* Same hover color as nav */
 }
+
+/* Container to center the form */
+.form-container {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;  /* Centers vertically (if needed) */
+    width: 100%;  /* Full width of the screen */
+    padding: 20px;  /* Adds some spacing around the form */
+}
+
+/* Styling the iframe */
+.google-form {
+    width: 90%;  /* Make it take most of the screen width */
+    max-width: 900px;  /* Set a reasonable maximum width */
+    height: 1600px;  /* Adjust height to fit the form */
+    border: none;  /* Removes default iframe border */
+}
