@@ -7,6 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="logos/morbuilders_logo_light.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!--Chat Functionality-->  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui-theme-default.css">
+
+
 </head>
 
 <body>
@@ -23,9 +29,10 @@
                     <a href="index.html">home</a>
                     <a href="apply.html">apply</a>
                     <a href="portfolio.html">portfolio</a>
-                    <a href="blog.html">blog</a>
+                    <!-- <a href="blog.html">blog</a> -->
+                    <a href="services.html">services</a>
                     <a href="faq.html">faq</a>
-                    <a href="usecases.html">use cases</a>
+                    <!-- <a href="usecases.html">use cases</a> -->
                     <a href="pow.html">pow</a>
                     <a href="https://dashboard.mor.org/#/builders/0x8036bbb740074d06db6b7741fcf9f52bd25846b9fc7e0a10c983c51530eaa999?network=mainnet" target="_blank">stake</a>
                 </div>
@@ -100,6 +107,81 @@
         });
     </script>
 
+<!--Chat Functionality--> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/botui/build/botui.min.js"></script>
+
+    
+
+    <!--Chat Functionality--> 
+    <!--
+    <style>
+    #botui-app {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 350px;
+      height: 500px;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      background: white;
+      z-index: 1000;
+    }
+    </style>
+
+    <div id="botui-app">
+      <bot-ui></bot-ui>
+    </div>
+
+        <script>
+        var botui = new BotUI('botui-app');
+
+        botui.message.add({
+          content: 'Hi! Welcome to Morpheus Builders. How can I help you?'
+        }).then(function () {
+          userInput();
+        });
+
+        function userInput() {
+          botui.action.text({
+            action: {
+              placeholder: 'Whats up?...'
+            }
+          }).then(function (res) {
+            fetchChatResponse(res.value);
+          });
+        }
+
+        function fetchChatResponse(message) {
+          botui.message.add({ loading: true }).then(function (index) {
+            fetch('http://localhost:5000/chat', { // Update with your Flask backend URL after deployment
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify({message: message})
+            })
+            .then(response => response.json())
+            .then(data => {
+              botui.message.update(index, {
+                loading: false,
+                content: data.response
+              });
+              userInput();  // Continue conversation
+            })
+            .catch(error => {
+              console.error('Error:', error);
+              botui.message.update(index, {
+                loading: false,
+                content: 'Something went wrong. Please try again.'
+              });
+              userInput();
+            });
+          });
+        }
+    </script> -->
+
 
 </body>
 
@@ -112,6 +194,9 @@
 
   gtag('config', 'G-0Q668K0X7N');
 </script>
+
+
+
 </html>
 <!-- New Features -->
 <!-- update the footer to have resource links like moragents install, apply, official morpheus, x account, etc etc. -->
