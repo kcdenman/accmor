@@ -191,7 +191,35 @@
         </div>
       </div>
     </div>
+
+  <!-- Email Sign-up (matches mint-on-black theme) -->
+    <div class="signup-stack">
+      <form
+        id="signupForm"
+        action="https://script.google.com/a/macros/morbuilders.xyz/s/AKfycbyenr2U9WnWBrHwq2HJ8dNjFmAkTukZWTlt3dLE_jagGbIioMIde5b9tfwcP6pocVKi/exec"
+        method="POST"
+        class="email-signup">
+        
+        <label for="email" class="visually-hidden">Email address</label>
+
+        <input type="email"
+               id="email"
+               name="email"
+               placeholder="get morbuilders updates"
+               required
+               class="email-input">
+
+        <button type="submit" class="email-button">
+          subscribe
+        </button>
+      </form>
+        <!-- hidden until we POST -->
+        <p id="signupMsg" class="signup-msg" hidden>
+          you’re on the list 🛠️
+        </p>
+
   </div>
+
 
   <!-- Footer (consistent with your homepage) -->
   <footer>
@@ -219,6 +247,26 @@
       navLinks.classList.toggle("open");
     });
   </script>
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', async function(e){
+      e.preventDefault();                               // stop normal navigation
+      const form = e.target;
+      const data = new FormData(form);
+
+      try{
+        await fetch(form.action, {                      // POST to Apps Script
+          method: 'POST',
+          body: data,
+          mode: 'no-cors'                               // we don’t need the response
+        });
+        form.reset();                                   // clear the field
+        document.getElementById('signupMsg').style.display = 'block'; // show success
+      }catch(err){
+        alert('oops—something went wrong, try again?');
+      }
+    });
+</script>
+
 </body>
 
 <!-- Google tag (gtag.js) -->

@@ -802,3 +802,85 @@ video {
 .link-mint-hover:hover{
     color:#00FF85;          /* Neon Mint */
 }
+
+/* === email-signup block === */
+.email-signup{
+  display:flex;
+  gap:.75rem;
+  flex-wrap:nowrap;   /* keep them on one line by default     */
+  max-width:480px;
+  margin-inline:auto;
+}
+
+.email-input{
+  flex:1 1 auto;      /* grow & shrink to fill remaining room */
+  min-width:0;        /* prevents overflow on very narrow screens */
+  padding:12px 16px;
+  font:inherit;
+  color:#ffffff;
+  background:#000;
+  border:2px solid var(--mint);
+  border-radius:6px;
+  outline:none;
+  transition:border-color .25s ease;
+}
+
+.email-input:focus{
+  border-color:var(--mint-dark);
+}
+
+.email-button{
+  white-space:nowrap; /* keeps “subscribe” on one tidy line   */
+  padding:12px 20px;
+  font-weight:600;
+  text-transform:lowercase;
+  color:#000;
+  background:var(--mint);
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  transition:background .25s ease, transform .15s ease;
+}
+
+.email-button:hover{
+  background:var(--mint-dark);
+  transform:scale(1.05);
+}
+
+/* Optional: below ~350 px, allow stacking instead of squeezing */
+@media (max-width: 350px){
+  .email-signup{ flex-wrap:wrap; }
+}
+
+/* keep screen-readers happy */
+.visually-hidden{
+  position:absolute!important;
+  clip:rect(1px,1px,1px,1px);
+  width:1px;height:1px;
+  overflow:hidden;
+}
+
+/* ---- global colour tokens (add just once) ---- */
+:root{
+  --mint: #00FF85;       /* neon-mint brand green */
+  --mint-dark: #20DC8E;  /* darker green used for hovers & borders */
+}
+
+/* Stack wrapper: centers everything horizontally */
+.signup-stack{
+  display:flex;
+  flex-direction:column;
+  align-items:center;  /* centers form AND message */
+  width:100%;
+  margin-top:20px;     /* optional spacing from other content */
+}
+
+/* confirmation text */
+.signup-msg{
+  margin-top:12px;     /* gap below the form */
+  color:#FFFFFF;       /* white */
+  font-weight:500;
+  text-align:center;   /* ensures it’s centered under narrow forms */
+}
+
+
