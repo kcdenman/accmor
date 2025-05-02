@@ -211,8 +211,102 @@
             <p class="services-tagline">morbuilders focuses on enabling four key dimensions - agent discoverability, capital access, compute access and product distribution.</p>
             <img src="logos/capital-cluster.svg" alt="Capital / Distribution / Compute" class="cluster">
             <p></p>
-            <a href="apply.html" class="hero-button hero-button--center">apply for builder services</a>
+            <!-- <a href="apply.html" class="hero-button hero-button--center">apply for builder services</a> -->
+                    <!--  lead‑gen form + success message  -->
+        
+            <h1>
+                <span>Get</span>
+                <span style="color:#fff;">in touch</span>
+            </h1>
+
+        <div class="signup-stack">           <!-- centres form + message -->
+          <form id="leadForm"
+                action="https://script.google.com/macros/s/AKfycbzXajrxa2c2RoM3vJzEGQtM6mrny7HxthTgV_nXx6OSxu4ZMq5_vlSF18pFx5rvFpB7hQ/exec"
+                method="POST"
+                class="lead-form">
+
+            <!-- basic info -->
+            <input type="text"  name="name"    placeholder="name*"    required>
+            <input type="text"  name="company" placeholder="company*" required>
+            <input type="email" name="email"   placeholder="e‑mail*"  required>
+
+            <!-- numeric fields -->
+            <input type="number" name="employees"   min="1"  placeholder="# employees">
+
+            <!-- drop‑downs -->
+            <!-- TEXT‑MODEL USAGE  (replaces: textTokens number field) -->
+            <select name="textTokens" required>
+              <option value="" disabled selected>text‑only LLM tokens (last 30 days)</option>
+              <option value="lt5m">‹ 5 million — Low / exploratory</option>
+              <option value="5‑50m">5 – 50 million — Medium / growth</option>
+              <option value="50‑200m">50 – 200 million — High / heavy use</option>
+              <option value="gt200m">› 200 million — Very high / at‑scale</option>
+            </select>
+
+            <!-- IMAGE‑MODEL USAGE  (replaces: imageTokens number field) -->
+            <select name="imageTokens" required>
+              <option value="" disabled selected>AI‑generated images (last 30 days)</option>
+              <option value="lt500">‹ 500 images — Low</option>
+              <option value="500‑5k">500 – 5 000 images — Medium</option>
+              <option value="5k‑50k">5 000 – 50 000 images — High</option>
+              <option value="gt50k">› 50 000 images — Very high</option>
+            </select>
+            <select name="category">
+              <option value="">AI category…</option>
+              <option>basic chat</option>
+              <option>games</option><option>coding</option><option>infrastructure</option>
+              <option>defi</option><option>business productivity</option>
+              <option>companion</option><option>other</option>
+            </select>
+
+            <!-- SERVICES OF INTEREST ─────────────────────────────────-->
+            <div class="form-group checkbox-wrapper">
+              <p class="checkbox-title">Services of interest — choose all that apply</p>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="services" value="subnet-onboarding">
+                basic subnet onboarding
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="services" value="increase-emissions">
+                strategic engagement to increase emissions
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="services" value="comarketing">
+                comarketing support
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="services" value="agent-compute">
+                agent and compute integration support
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="services" value="speaking">
+                speaking engagement opportunities
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="services" value="other">
+                other
+              </label>
+            </div>
+
+
+
+            <button type="submit" class="email-button">submit</button>
+          </form>
+
+          <!-- hidden until JS POST succeeds -->
+          <p id="leadMsg" class="signup-msg" hidden>thanks — we’ll be in touch ✅</p>
+        </div>
+
         </section>
+
+
+
 
     </main>
 
@@ -236,5 +330,19 @@
             navLinks.classList.toggle('open');
         });
     </script>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', async e=>{
+          e.preventDefault();
+          const f=e.target;
+          try{
+            await fetch(f.action,{method:'POST',body:new FormData(f),mode:'no-cors'});
+            f.reset();
+            document.getElementById('leadMsg').hidden=false;
+          }catch(_){ alert('oops — try again?'); }
+        });
+    </script>
+
+
 </body>
 </html>
