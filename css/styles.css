@@ -579,9 +579,9 @@ video {
 /* Portfolio Grid */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columns adjust to available space */
-    gap: 20px; /* Space between cards */
-    justify-items: stretch; /* Ensure cards stretch to fill available space */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Columns adjust to available space */
+    gap: 2rem; /* Space between cards */
+    align-items: stretch; /* Ensure cards stretch to fill available space */
 }
 
 /* White Card Styling */
@@ -594,7 +594,7 @@ video {
     display: flex;
     justify-content: center; /* Center the logo */
     align-items: center; /* Center the logo */
-    height: 150px; /* Fixed card height */
+/*  height: 150px; Fixed card height*/
     width: auto;
 }
 
@@ -976,6 +976,136 @@ video {
   accent-color: var(--mint);   /* fills the checkmark in mint */
   cursor: pointer;
 }
+
+/* ─── AI-Agent Jobs tweaks ───────────────────────────────────── */
+.portfolio-item {
+  position: relative;             /* for absolutely-positioned pills */
+  display: flex;
+  flex-direction: column;         /* stack content, pills at bottom */
+  justify-content: flex-start;    /* don’t center vertically */
+  padding: 2rem;                  /* match your other portfolio cards */
+  background: #fff;               /* ensure white bg */
+  border-radius: .5rem;
+}
+
+.job-content {
+  width: 100%;
+  color: #000;                    /* black text on white */
+  text-align: left;
+  padding-bottom: 2.5rem;
+}
+
+.job-content ul {
+  margin: 1rem 0;                 /* space above/below list */
+  padding-left: 1.5rem;           /* indent bullets */
+  list-style-type: disc;
+  line-height: 1.4;               /* tighter line spacing */
+  margin-bottom: 1.5;
+}
+
+.job-content li {
+  margin-bottom: .5rem;           /* space between items */
+  word-wrap: break-word;          /* prevent overflow */
+}
+
+/* remove h3’s default top margin inside our cards */
+.job-content h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;    /* still keep some space below the title */
+}
+
+/* stake pill (right) */
+.portfolio-stake {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+/* apply pill (left) */
+.apply-pill {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.black-pill {
+  background-color: #000;
+  color: var(--mint);
+  padding: 0.25rem 0.75rem;
+  display: inline-block;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* ensure apply-pill stays positioned */
+.apply-pill {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+/* make all pills match card corners */
+.black-pill,
+.portfolio-stake {
+  border-radius: .5rem;    /* same as .portfolio-item */
+}
+
+/* ─── Restore original portfolio-item behavior ────────────────── */
+.portfolio-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* remove any flex-direction or height:auto overrides here */
+}
+
+/* ─── Job‐card specific overrides ────────────────────────────── */
+.job-card {
+  /* build on .portfolio-item but stack top‐to‐bottom */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* <-- ensure content stays at top */
+  align-items: flex-start;      /* <-- left-align text */
+  padding: 2rem;
+  /* remove align-self and height:auto here */
+}
+
+/* text & list inside job cards */
+.job-card .job-content {
+  width: 100%;
+  text-align: left;
+  color: #000;
+  padding-bottom: 2.5rem; /* room for pills */
+}
+.job-card .job-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  line-height: 1.4;
+}
+.job-card .job-content li {
+  margin-bottom: .5rem;
+  word-wrap: break-word;
+}
+
+/* positioning for pills in job cards */
+.job-card .apply-pill {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+.job-card .portfolio-stake {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+/* unify corner radius on pills */
+.black-pill,
+.portfolio-stake {
+  border-radius: .5rem;  /* same as .portfolio-item */
+}
+
 
 
 

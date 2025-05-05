@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="logos/morbuilders_logo_light.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <img src="logos/morbuilders_logo_name_dark.svg" alt="Morpheus Logo" class="logo-img">
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">home</a>
+          <a href="apply.html">apply</a>
+          <a href="portfolio.html">portfolio</a>
+          <a href="services.html">services</a>
+          <a href="faq.html">faq</a>
+          <a href="pow.html">pow</a>
+          <a href="https://dashboard.mor.org/#/builders/0x8036bbb740074d06db6b7741fcf9f52bd25846b9fc7e0a10c983c51530eaa999?network=mainnet" target="_blank">stake</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- AI Agent Jobs Section -->
+<main>
+  <section class="portfolio">
+    <div class="portfolio-container">
+      <h2 class="portfolio-title">AI Agent Jobs</h2>
+      <div class="portfolio-grid">
+
+        <!-- Lead Generation Agent -->
+        <div class="portfolio-item job-card">
+          <div class="job-content">
+            <h3><span class="black-pill">Lead Generation Agent</span></h3>
+            <ul>
+              <li>Generate top-of-funnel qualified leads &amp; set up 10 calls/week.</li>
+              <li>Understands Morbuilders’ ideal builder profile end-to-end.</li>
+              <li>Fulfilled by an AI agent using Morpheus Compute.</li>
+              <li>Available for use on <a href="https://freeai.xyz" class="link-mint-hover" target="_blank">freeai.xyz</a>.</li>
+            </ul>
+          </div>
+          <a href="https://morbuilders.xyz" class="apply-pill black-pill">Apply</a>
+          <span class="portfolio-stake">1500 MOR</span>
+        </div>
+
+        <!-- Builder Subnet Onboarding Agent -->
+        <div class="portfolio-item job-card">
+          <div class="job-content">
+            <h3><span class="black-pill">Onboarding Agent</span></h3>
+            <ul>
+              <li>Scale onboarding from hundreds to thousands of Builder Subnets with automation &amp; human-in-the-loop flows.</li>
+              <li>Fulfilled by an AI agent using Morpheus Compute where applicable.</li>
+              <li>Available on <a href="https://freeai.xyz/agents/onboarding-agent" class="link-mint-hover" target="_blank">freeai.xyz</a>.</li>
+            </ul>
+          </div>
+          <a href="https://morbuilders.xyz" class="apply-pill black-pill">Apply</a>
+          <span class="portfolio-stake">1000 MOR</span>
+        </div>
+
+        <!-- Marketing Agent -->
+        <div class="portfolio-item job-card">
+          <div class="job-content">
+            <h3><span class="black-pill">Marketing Agent</span></h3>
+            <ul>
+              <li>Expand Morbuilders’ marketing reach on X via automated campaigns &amp; analytics.</li>
+              <li>Fulfilled by an AI agent using Morpheus Compute.</li>
+              <li>Available on <a href="https://freeai.xyz/agents/marketing-agent" class="link-mint-hover" target="_blank">freeai.xyz</a>.</li>
+            </ul>
+          </div>
+          <a href="https://morbuilders.xyz" class="apply-pill black-pill">Apply</a>
+          <span class="portfolio-stake">1000 MOR</span>
+        </div>
+
+        <!-- Catch All / User Defined Agent -->
+        <div class="portfolio-item job-card">
+          <div class="job-content">
+            <h3><span class="black-pill">Have an Idea?</span></h3>
+            <ul>
+              <li>Submit an agent job idea you think would accelerate morbuilders.</li>
+              <li>We will evluate it and let you know if we will stake to it.</li>
+              <li>Available on <a href="https://freeai.xyz/agents/marketing-agent" class="link-mint-hover" target="_blank">freeai.xyz</a>.</li>
+            </ul>
+          </div>
+          <a href="https://morbuilders.xyz" class="apply-pill black-pill">Apply</a>
+          <span class="portfolio-stake">1000 MOR</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <footer>
+    <div class="footer-container">
+      <a href="index.html" class="footer-logo">
+        <img src="logos/morbuilders_logo_name_dark.svg" alt="Morpheus Logo" class="logo-img">
+      </a>
+      <hr class="footer-line">
+      <div class="footer-disclaimer">
+        <p><em>Disclaimer: The Mor Builders Accelerator is an independent contributor to the Morpheus ecosystem. Staking uses early-stage, open-source code developed by the Morpheus community. The Accelerator is not responsible for the software's functionality or security. Stake at your own risk.</em></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      document.getElementById('nav-links').classList.toggle('open');
+    });
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Q668K0X7N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Q668K0X7N');
+  </script>
+
+</body>
+</html>
