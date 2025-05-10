@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="logos/morbuilders_logo_light.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/styles.css">
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -35,7 +37,8 @@
     </header>
     
 
-    <div class="container" style="text-align: left; padding: 20px 20px 20px; margin-top: 40px;">
+    <div class="container page-faq">
+
 
        <h2>FAQs</h2>
             <div class="faq">
@@ -91,21 +94,6 @@
 
     </div>
 
-    <footer>
-
-        <div class="social-icons">
-            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://github.com" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-    </footer>
-
     <script>
     document.querySelectorAll('.faq-toggle').forEach(button => {
         button.addEventListener('click', () => {
@@ -127,28 +115,26 @@
         });
     </script>
 
-    <!-- 
-
-    <div class="video-container">
-        <video autoplay loop muted>
-          <source src="videos/morpheus_nugget_video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-    </div>
-
-    -->
-
-<footer>
-    <div class="footer-container">
+    <footer>
+      <div class="footer-container footer-container-row">
         <a href="index.html" class="footer-logo">
-            <img src="logos/morbuilders_logo_name_dark.svg" alt="Morpheus Logo" class="logo-img">
+          <img src="logos/morbuilders_logo_name_dark.svg" alt="Morpheus Logo" class="logo-img">
         </a>
-        <hr class="footer-line">
-        <div class="footer-disclaimer">
-            <p><em>Disclaimer: The Mor Builders Accelerator is an independent contributor to the Morpheus ecosystem. Staking uses early-stage, open-source code developed by the Morpheus community. The Accelerator is not responsible for the software's functionality or security. Stake at your own risk.</em></p>
+
+        <div class="social-icons">
+          <a href="https://x.com/morbuilders" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://github.com/kcdenman/accmor" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a href="https://t.me/morleads_bot" target="_blank" aria-label="Telegram">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
 
 </body>

@@ -18,6 +18,12 @@ header {
 
 }
 
+/* Ensure padding and border are included in width calculations globally */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
 .nav-links a {
     color: #FFFFFF; /* White links for navigation */
     text-decoration: none; /* Remove underline */
@@ -225,27 +231,27 @@ footer .social-icons a:hover {
 
 
 footer {
-    background-color: #000000; /* Black background */
+    background-color: #000000;
     color: white;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    margin-top: 40px; /* Add vertical space above the footer line */
+    border-top: 1px solid #00FF85; /* Mint green line */
 }
 
 .footer-container {
-    width: 100%;
+    width: 100%; /* Optional: constrain to content width */
+    margin: 0 auto;    /* Center the container itself */
+    padding: 40px 40px; /* Horizontal breathing room */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    padding: 0 20px;
 }
 
+
 .footer-logo img {
-    height: 20px; /* Matches the header logo height */
-    margin-bottom: 10px;
+    height: 24px;
+    width: auto;
 }
 
 .footer-line {
@@ -261,6 +267,17 @@ footer {
     text-align: center;
     max-width: 1300px;
     margin-top: 0px;
+}
+
+/* Responsive: Stack on mobile */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-logo img {
+        margin-bottom: 10px; /* small gap when stacked */
+    }
 }
 
 /* Tile Styles */
@@ -355,7 +372,7 @@ video {
 /* Full-Screen Hero Section */
 .hero {
     position: relative;
-    width: 100vw; /* Full viewport width */
+    width: 100%; /* Full viewport width */
     height: 100vh; /* Full viewport height */
     background-image: url('../logos/morbuilders_logo_dark.svg'); /* Replace with your image path */
     background-size: 700px 700px; /* Ensures image covers the area */
@@ -1105,6 +1122,30 @@ video {
 .portfolio-stake {
   border-radius: .5rem;  /* same as .portfolio-item */
 }
+
+footer .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+
+footer .social-icons a {
+    color: #ffffff; /* White by default */
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #00FF85; /* Neon mint on hover */
+}
+
+.page-faq {
+    text-align: left;
+    padding: 20px 20px 0; /* Remove bottom padding */
+    margin-top: 40px;
+    margin-bottom: 0; /* Prevent extra bottom spacing */
+}
+
 
 
 
