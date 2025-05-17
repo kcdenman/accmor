@@ -1146,6 +1146,35 @@ footer .social-icons a:hover {
     margin-bottom: 0; /* Prevent extra bottom spacing */
 }
 
+.scroll-arrow-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.custom-arrow-img {
+  width: clamp(40px, 4vw, 100px); /* Responsive scaling between 40px and 100px */
+  height: auto;                   /* Maintains aspect ratio */
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(10px); }
+  60% { transform: translateY(5px); }
+}
+
+/* Ensure anchor targets leave space for fixed header */
+:target {
+  scroll-margin-top: 100px; /* Or whatever your header height + margin is */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
 
 
 
